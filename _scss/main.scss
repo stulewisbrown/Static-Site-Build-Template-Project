@@ -1,6 +1,29 @@
-@import "reset";
-@import "syntax";
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ *
+ * sass --watch style.scss:style.min.css --style compressed
+ *
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
 
-body {
-    background: white;
-}
+
+/**
+ * Setup
+ */
+ /**
+ * Jekyll CSS
+ @import "reset";
+ @import "syntax";
+ **/
+
+
+ /**
+ * inuit css
+ **/
+
+@import "vars";
+@import "inuit.css/inuit";
