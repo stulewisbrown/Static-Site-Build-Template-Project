@@ -1,4 +1,3 @@
-console.log('hello, world');
 $(function(){
 	'use strict';
 

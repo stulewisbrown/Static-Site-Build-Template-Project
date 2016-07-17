@@ -1,0 +1,38 @@
+
+  ul.nav li {
+    &.icon {
+      display: none;
+    }
+  }
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width: 680px) {
+  ul.nav li {
+    &:not(:first-child) {
+      display: none;
+    }
+    &.icon {
+      float: right;
+      display: inline-block;
+    }
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width: 680px) {
+  ul.nav.responsive {
+    position: relative;
+    li {
+      &.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      float: none;
+      display: inline;
+      a {
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+}
