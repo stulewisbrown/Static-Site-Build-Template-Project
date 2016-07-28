@@ -6,11 +6,11 @@
     </head>
     <body>
 
-        <div class="site">
+        
         {% include navbar.html %}
 
           {{ content }}
-
+          {% include contacts.html %}
 
           <div class="footer">
             <div class="contact">
@@ -27,8 +27,8 @@
               </p>
             </div>
           </div>
-        </div>
-    <script src="//cdn.jsdelivr.net/g/jquery"></script>
+        
+    <script src="jquery.js"></script>
     <script src="/js/scripts.min.js"></script>
     </body>
 </html>
