@@ -40,7 +40,8 @@ gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
-        }
+        },
+        open: false
     });
 });
 
@@ -82,7 +83,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
     gulp.watch('_scss/**/*.scss', ['sass']);
     gulp.watch('_js/*.js', ['scripts']);
-    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_includes/*.html', '_data/*.yml', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**
