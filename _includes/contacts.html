@@ -1,9 +1,9 @@
-<ul>
+<section class="contacts">
 {% for member in site.data.contacts %}
-  <li>
+  <div>
     <a href="https://github.com/{{ member.github }}">
       {{ member.name }}
     </a>
-  </li>
+  </div>
 {% endfor %}
-</ul>
+</section>

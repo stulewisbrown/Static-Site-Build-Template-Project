@@ -1,0 +1,11 @@
+section.contacts{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	div {
+		background: grey;
+		margin:10px;
+		min-width: 200px;
+		height: 50px;
+	}
+}
