@@ -5,7 +5,7 @@
     }
   }
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width: 680px) {
+@include mobile {
   ul.nav li {
     &:not(:nth-child(-n+3)) {
       display: none;
@@ -18,7 +18,7 @@
 
   ul.nav.responsive {
     position: relative;
-    background: $brand-color +!important;
+    background: #ff9800 +!important;
     width: 75%;
     min-height: 100%;
     overflow-y: hidden;
