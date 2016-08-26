@@ -8,6 +8,9 @@
   padding: 10px;
   flex: 1 100%;
   }
+
+
+
   .header {
   background: tomato;
   }
@@ -43,7 +46,11 @@
 }
 
 
-
+  #homeImg {
+    padding:0;
+    margin: auto;
+    display: block;
+  }
 
 
 body {

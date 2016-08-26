@@ -1,11 +1,13 @@
 section.contacts{
 	display:flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: space-around;
 	div {
 		background: grey;
-		margin:10px;
+		margin:1px;
+		padding: 5px;
 		min-width: 200px;
-		height: 50px;
+		height: 100px;
+		flex: 0 1 auto;
 	}
 }
