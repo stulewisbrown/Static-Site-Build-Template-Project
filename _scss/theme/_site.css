@@ -3,6 +3,20 @@ body {
   position:relative;
 }
 
+/*mixin and for site breakpoints
+	EXAMPLE USAGE:
+	p {
+	  font-size: 16px;
+
+	  @include tablet {
+	    font-size: 18px;
+	  }
+
+	  @include desktop {
+	    font-size: 20px;
+	  }
+	}
+*/
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
@@ -17,3 +31,4 @@ $desktop-width: 1024px;
     @content;
   }
 }
+
