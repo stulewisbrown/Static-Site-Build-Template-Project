@@ -6,8 +6,23 @@ section.contacts{
 		background: grey;
 		margin:1px;
 		padding: 5px;
-		min-width: 200px;
 		height: 100px;
 		flex: 0 1 auto;
+
+		@include mobile {
+			flex: 1 100%;
+			text-align: center;
+		}
+
+		@include tablet {
+		    flex: 1 0 auto;
+		    min-width: 200px;
+		  }
+
+		@include desktop {
+			flex: 1 0 auto;
+			min-width: 200px;
+		}
 	}
+
 }
