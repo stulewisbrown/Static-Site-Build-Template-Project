@@ -1,4 +1,39 @@
 footer.footer {
 	display: flex;
-	
+	flex-flow: row wrap;
+	justify-content: space-around;
+	background: #cccccc;
+	padding: 10px;
+
+	> * {
+		flex: 1 100%;
+		padding-right: 2em;
+		margin-bottom:20px;
+	}
+
+	p {
+		margin-bottom:0.5em;
+	}
+	p.details {
+		flex: 1 auto;
+	}
+	div.address {
+		flex: 1 auto;
+
+	}
+	section.social {
+		padding-right: 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+
+		div {
+			font-size: 0.75em;
+			margin-top:20px;
+			background: #eaeaea;
+			width:100px;
+			height: 80px;
+			text-align: center;
+		}
+	}
 }
