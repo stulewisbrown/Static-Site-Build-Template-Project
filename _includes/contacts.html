@@ -1,9 +1,11 @@
 <section class="contacts">
 {% for member in site.data.contacts %}
   <div>
-    <a href="https://github.com/{{ member.github }}">
-      {{ member.name }}
-    </a>
+      <h5>{{ member.name }}</h5>
+      <p>
+      {{ member.about }}
+      </p>
+    
   </div>
 {% endfor %}
 </section>

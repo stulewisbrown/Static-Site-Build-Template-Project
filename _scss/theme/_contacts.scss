@@ -9,20 +9,24 @@ section.contacts{
 		height: 100px;
 		flex: 0 1 auto;
 
+
 		@include mobile {
 			flex: 1 100%;
 			text-align: center;
+			
 		}
 
 		@include tablet {
 		    flex: 1 0 auto;
 		    min-width: 200px;
-		    flex-basis: 35%;
+		     flex-basis: 35%;
+
 		  }
 
 		@include desktop {
 			flex: 1 0 auto;
 			min-width: 200px;
+			 flex-basis: 35%;
 		}
 	}
 
