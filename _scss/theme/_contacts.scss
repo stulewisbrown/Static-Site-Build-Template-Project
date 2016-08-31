@@ -17,6 +17,7 @@ section.contacts{
 		@include tablet {
 		    flex: 1 0 auto;
 		    min-width: 200px;
+		    flex-basis: 35%;
 		  }
 
 		@include desktop {
