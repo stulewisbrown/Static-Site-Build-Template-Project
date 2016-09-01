@@ -1,0 +1,29 @@
+section.news {
+	@extend .fullWidth;
+	background:chocolate;
+	.wrap {
+		@extend .innerFullWidth;
+		display: flex;
+
+		div.news-item {
+			flex: 1 1 auto;
+			width: 33.33333%!important;
+			padding-left:16px;
+			background-color: #FFF;
+
+			div.img-wrap{
+		    	height: 200px;
+
+				div.news-image {
+					background-repeat: no-repeat;
+				    background-position: top center;
+				    background-size: cover;
+				    height: 100%;
+				}
+			}
+		}
+		div.news-item:first-child {
+			padding-left: 0;
+		}
+	}
+}
