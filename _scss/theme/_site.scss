@@ -40,14 +40,23 @@ $desktop-width: 1024px;
   }*/
 
 
-body {
-  padding: 1em; 
+  /*TEMPLATE/HELPER CLASSES*/
+.fullWidth {
+  max-width: 100%;
+  width: 100%;
+}
+.innerFullWidth {
+    max-width: $site-max-width;
+    margin: 0 auto;
+}
+
+  /*MAIN ELEMENT STYLES*/
+body { 
   position:relative;
   min-width: $site-min-width;
 
   >*{
-    max-width: $site-max-width;
-    margin: 0 auto;
+    @extend .innerFullWidth
   }
 
   @include mobile {
