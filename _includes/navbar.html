@@ -6,6 +6,8 @@
 	      	{{p.title}}</a>
 	      	</li>
 	      {% endif %}
+	      {% if p > 3 %}
+	      	<li class="icon" id="nav--icon"><a href="#">&#9776;</a></li>
+	      {% endif %}
       {% endfor %}
-       <li class="icon" id="nav--icon"><a href="#">&#9776;</a></li>
    	</ul>
