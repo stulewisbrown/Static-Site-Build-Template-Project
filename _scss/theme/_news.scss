@@ -12,7 +12,6 @@ section.news {
 			}
 
 		div.news-item {
-			background-color: #FFF;
 			float: left;
 			width:100%;
 				@include desktop {
@@ -44,6 +43,7 @@ section.news {
 			div.content {
 				overflow: hidden;
 				padding-left: 16px;
+				background-color: crimson;
 				    @include desktop {
 				    	padding-left: 0;
 				    }
