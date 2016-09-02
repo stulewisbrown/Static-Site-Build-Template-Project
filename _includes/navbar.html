@@ -1,7 +1,11 @@
       <ul class="navi">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
+      {% assign navigation-pages = site.html_pages | sort: 'navigation-order' %}
+      {% for p in navigation-pages %}
+	      {% if p.navigation-order%}
+	      	<li><a href="{{ p.url }}" {% if p.url == page.url%} class="active" {% endif %}>
+	      	{{p.title}}</a>
+	      	</li>
+	      {% endif %}
+      {% endfor %}
        <li class="icon" id="nav--icon"><a href="#">&#9776;</a></li>
    	</ul>
