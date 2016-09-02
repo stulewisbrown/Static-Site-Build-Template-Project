@@ -1,11 +1,11 @@
 {% capture url %}{% if page.language%}{{ page.url | remove: "/" | remove: page.language }}{% else %}{{ page.url | remove: "/" }}{% endif %}{% endcapture %}
 {% if url.size > 0 %}
-  <nav class="breadcrumbs hidden-sm-down">
+  <nav>
 
-    <a class="breadcrumb-item" href={{ "/" | prepend: site.baseurl | prepend: site.url }}>Home</a>
-
-    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
-
+    <ol class="nav breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+      <li class="breadcrumb-item{% if crumb.url == page.url %} active{% endif %}" property="itemListElement" typeof="ListItem">
+        <a class="breadcrumb-item" href={{ "/" | prepend: site.baseurl | prepend: site.url }}>Home</a>
+      </li>
     <!-- Iteration breadcrumb item -->
     {% assign position = 0 %}
     {% for crumb in breadcrumbs %}
