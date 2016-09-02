@@ -1,7 +1,7 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
 var cp          = require('child_process');
 var jshint      = require('gulp-jshint');
@@ -52,7 +52,10 @@ gulp.task('sass', function () {
     return gulp.src('_scss/main.scss', { style: 'expanded' })
     .pipe(plumber())
     .pipe(sass())
-    .pipe(prefix('last 2 version', 'ie 9'))
+    .pipe(autoprefixer({
+            browsers: ['> 5%', 'last 2 versions', 'Firefox ESR', 'Safari >= 6', 'Opera 12.1'],
+            cascade: false
+        }))
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssmin())
