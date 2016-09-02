@@ -11,9 +11,10 @@ section.news {
 				float: none;
 			}
 
-		div.news-item {
+		a.news-item {
 			float: left;
 			width:100%;
+							background-color: crimson;
 				@include desktop {
 					padding-left:16px;
 					width: 100%;
@@ -43,7 +44,6 @@ section.news {
 			div.content {
 				overflow: hidden;
 				padding-left: 16px;
-				background-color: crimson;
 				    @include desktop {
 				    	padding-left: 0;
 				    }
