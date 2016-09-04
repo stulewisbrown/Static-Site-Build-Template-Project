@@ -76,6 +76,7 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
+    .pipe(browserSync.reload({stream:true}))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
