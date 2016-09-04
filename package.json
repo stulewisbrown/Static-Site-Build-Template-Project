@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shane Osbourne",
+  "author": "Stuart Brown",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^1.3.7",
@@ -14,14 +14,19 @@
     "gulp-autoprefixer": "1.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.11",
+    "gulp-concat": "^2.6.0",
     "gulp-cssmin": "^0.1.7",
+    "gulp-jshint": "^2.0.1",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.1.0"
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
+    "url": "https://github.com/stub2001/jekyll-gulp-project.git"
   },
   "keywords": [
     "jekyll",
@@ -29,8 +34,5 @@
     "sass",
     "browsersync"
   ],
-  "bugs": {
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
-  },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "homepage": "https://github.com/stub2001/jekyll-gulp-project/"
 }
