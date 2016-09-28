@@ -20,11 +20,13 @@ To use this starter project, you'll need the following things installed on your 
 
 **development mode**
 
-This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
+All you need to do to get this project running in development mode is:
 
 ```shell
 $ gulp
 ```
+
+This will implement the Jekyll build, give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
 
 BrowserSync is not set to open a new window everytime you 'build' (trust me, it gets annoying). So you'll need to navigate to the local address it gives you after running `gulp` (usually something like 'localhost:3000'). After that, if you quit and re-run gulp, you will need to reload the page manually just for the first time. If you prefer opening a new tab every time, simply change `open: false` to `open: true` in the browsersync settings in gulpfile.js.
 
