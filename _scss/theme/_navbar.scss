@@ -1,5 +1,5 @@
 
-  ul.navi {
+  ul.nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -19,7 +19,7 @@
         &:not(:nth-child(-n+3)) {
           display: none;
         }
-        &#nav--icon {
+        &.nav__icon {
           float: right;
           display: inline-block;
         }
@@ -30,7 +30,7 @@
 
 
 
-  ul.navi.responsive {
+  ul.nav.responsive {
     background: #eee +!important;
     width: 75%;
     min-height: 100%;

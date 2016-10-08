@@ -8,7 +8,11 @@
  * github.com/inuitcss | inuitcss.com
  */
 
-
+/**
+ * This is an example inuitcss manifest file. DO NOT MODIFY THIS FILE DIRECTLY.
+ * Instead, copy and paste it into your own CSS directory and make additions,
+ * extensions, and modifications there.
+ */
 
 /**
  * CONTENTS
@@ -84,7 +88,7 @@
 @import "tools/tools.font-size";
 @import "tools/tools.clearfix";
 @import "tools/tools.hidden";
-/*@import "node_modules/sass-mq/mq";*/
+@import "node_modules/sass-mq/mq";
 
 
 
@@ -136,16 +140,6 @@
 @import "components/example.components.buttons";
 
 
-// THEME
-
-@import "theme/site";
-@import "theme/default";
-@import "theme/post";
-@import "theme/navbar";
-@import "theme/news";
-@import "theme/breadcrumbs";
-@import "theme/contacts";
-@import "theme/footer";
 
 
 
@@ -158,6 +152,3 @@ $inuit-offsets: true;
 @import "utilities/utilities.spacing";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
-
-
-

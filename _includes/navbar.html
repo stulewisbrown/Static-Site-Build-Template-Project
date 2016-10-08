@@ -1,5 +1,5 @@
 <nav>
-      <ul class="navi">
+      <ul class="nav">
       {% assign navigation-pages = site.html_pages | sort: 'navigation-order' %}
     {% for p in navigation-pages %}
 	      {% if p.navigation-order%}
@@ -9,7 +9,7 @@
 	      {% endif %}
 	    {% if forloop.last %}
       		{% if forloop.length >= 3 %}
-	    	<li class="icon" id="nav--icon"><a href="#">&#9776;</a></li>
+	    	<li class="icon nav__icon" id="js-icon"><a href="#">&#9776;</a></li>
 	    	{% endif %}
 	    {% endif %}
     {% endfor %}
