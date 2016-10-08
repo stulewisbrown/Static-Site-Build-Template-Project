@@ -7,6 +7,8 @@
 	    justify-content: flex-end;
 	    list-style: none;
 	    margin-left: 0;
+	    background: #FF5733;
+
 	    /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
 	    Show the list item that contains the link to open and close the topnav (li.icon) */
 	    @include mobile {
@@ -21,6 +23,16 @@
         	&:not(:nth-child(-n+3)) {
           		display: none;
         	}
+    	}
+    }
+
+    .c-nav__item__link {
+    	color: #fff;
+    	
+    	text-decoration: none;
+    	&:hover {
+    		cursor: pointer;
+    		color: yellow;
     	}
     }
 

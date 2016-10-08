@@ -3,13 +3,13 @@
       {% assign navigation-pages = site.html_pages | sort: 'navigation-order' %}
     {% for p in navigation-pages %}
 	      {% if p.navigation-order%}
-	      	<li class="c-nav__item"><a href="{{ p.url }}" {% if p.url == page.url%} class="active" {% endif %}>
+	      	<li class="c-nav__item"><a href="{{ p.url }}" class="{% if p.url == page.url%}active{% endif %} c-nav__item__link">
 	      	{{p.title}}</a>
 	      	</li>
 	      {% endif %}
 	    {% if forloop.last %}
       		{% if forloop.length >= 3 %}
-	    	<li class="c-nav__item c-nav__icon" id="js-icon"><a href="#">&#9776;</a></li>
+	    	<li class="c-nav__item c-nav__icon" id="js-icon"><a href="#" class="c-nav__item__link">&#9776;</a></li>
 	    	{% endif %}
 	    {% endif %}
     {% endfor %}
