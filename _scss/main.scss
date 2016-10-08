@@ -128,24 +128,25 @@
 
 
 
-
-
-// COMPONENTS
-//
-// Build and include your project’s UI Compoments here.
-@import "components/example.components.buttons";
-
-
 // THEME
 
 @import "theme/site";
-@import "theme/default";
+/*@import "theme/default";*/
 @import "theme/post";
 @import "theme/navbar";
 @import "theme/news";
 @import "theme/breadcrumbs";
 @import "theme/contacts";
 @import "theme/footer";
+
+// COMPONENTS
+//
+// Build and include your project’s UI Compoments here.
+@import "components/example.components.buttons";
+@import "components/components.navbar";
+
+
+
 
 
 
