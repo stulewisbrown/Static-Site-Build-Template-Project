@@ -1,10 +1,10 @@
 section.news {
-		@extend .fullWidth;
+		/*@extend .fullWidth;*/
 	background:chocolate;
 	float: left;
 	.wrap {
-		@extend .innerFullWidth;
-		display: block;
+/*		@extend .innerFullWidth;
+*/		display: block;
 		float: left;
 			@include desktop {
 				display: flex;

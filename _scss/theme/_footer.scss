@@ -2,11 +2,12 @@ footer.footer {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	background: #cccccc;
+	background: #6433FF;
 	padding: 20px;
 
 	> * {
 		flex: 1 100%;
+		color: white;
 	}
 
 	p {
@@ -58,7 +59,7 @@ footer.footer {
 		div {
 			font-size: 0.75em;
 			margin-top:20px;
-			background: #eaeaea;
+			background: #F633FF;
 			width:100px;
 			height: 80px;
 			text-align: center;

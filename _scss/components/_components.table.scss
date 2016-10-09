@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #TABLE
+   ========================================================================== */
+/*The inuit table has an issue with not respecting the margins on the wrapper of the page.
+This fixes it.*/
+
+.c-table {
+
+  th,
+  td {
+    padding-left: $inuit-global-spacing-unit;
+    vertical-align: top;
+    padding-top:$inuit-global-spacing-unit;
+    padding-bottom:$inuit-global-spacing-unit;
+  }
+
+  tr {
+  	border-bottom: 2px solid black;
+  }
+
+}
+

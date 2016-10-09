@@ -41,17 +41,17 @@ $desktop-width: 1024px;
 
 
   /*TEMPLATE/HELPER CLASSES*/
-.fullWidth {
+/*.fullWidth {
   max-width: 100%;
   width: 100%;
 }
 .innerFullWidth {
     max-width: $site-max-width;
     margin: 0 auto;
-}
+}*/
 
   /*MAIN ELEMENT STYLES*/
-body { 
+/*body { 
   position:relative;
   min-width: $site-min-width;
 
@@ -69,4 +69,4 @@ body {
 
 p {
   max-width: ($site-max-width/4)*3;
-}
+}*/

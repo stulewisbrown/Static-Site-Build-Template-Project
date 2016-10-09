@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #BREADCRUMB
+   ========================================================================== */
+
+.c-breadcrumb {
+	background: #33FF71;
+	padding-left: 1rem;
+}
+
+.c-breadcrumb__item {
+}
+
+.c-breadcrumb__item__link {
+	color: purple;
+	text-decoration: none;
+}
+
+.c-breadcrumb__item+li:before {
+    content:"» ";
+}
+
+/*variants/modifers*/
+
+.c-breadcrumb--red {
+	background: #FF3933
+}

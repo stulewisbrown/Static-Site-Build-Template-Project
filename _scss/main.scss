@@ -84,6 +84,7 @@
 @import "tools/tools.font-size";
 @import "tools/tools.clearfix";
 @import "tools/tools.hidden";
+@import "tools/tools.float";
 /*@import "node_modules/sass-mq/mq";*/
 
 
@@ -135,7 +136,6 @@
 @import "theme/post";
 @import "theme/navbar";
 @import "theme/news";
-@import "theme/breadcrumbs";
 @import "theme/contacts";
 @import "theme/footer";
 
@@ -144,6 +144,9 @@
 // Build and include your project’s UI Compoments here.
 @import "components/example.components.buttons";
 @import "components/components.navbar";
+@import "components/components.media-items";
+@import "components/components.breadcrumb";
+@import "components/components.table";
 
 
 

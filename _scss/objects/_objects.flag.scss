@@ -41,7 +41,7 @@
    */
 
   .o-flag__img {
-    width: 1px; /* [1] */
+    /*width: 1px;*/ /* [1] I REMOVED THIS BECAUSE IT JUST MAKES THE IMAGE DISAPPEAR*/ 
     padding-right: $inuit-global-spacing-unit;
 
 
