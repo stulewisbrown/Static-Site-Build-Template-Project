@@ -57,6 +57,8 @@ gulp.task('sass', function () {
             cascade: false
         }))
     .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('_site/css'))
+    .pipe(browserSync.reload({stream:true}))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssmin())
     .pipe(gulp.dest('css'))
