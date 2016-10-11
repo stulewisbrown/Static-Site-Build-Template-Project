@@ -3,12 +3,6 @@ jekyll-gulp-sass-browser-sync
 
 A starter project including full setup for Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync
 
-Here's a 1.5min [screencast](http://quick.as/pvrslgx) showing what you get.
-
-And here's a GIF showing the CSS injecting.
-
-![GIF](http://f.cl.ly/items/373y2E0e0i2p0E2O131g/test-gif.gif)
-
 ## System Preparation
 
 To use this starter project, you'll need the following things installed on your machine.
@@ -26,11 +20,15 @@ To use this starter project, you'll need the following things installed on your 
 
 **development mode**
 
-This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
+All you need to do to get this project running in development mode is:
 
 ```shell
 $ gulp
 ```
+
+This will implement the Jekyll build, give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
+
+BrowserSync is not set to open a new window everytime you 'build' (trust me, it gets annoying). So you'll need to navigate to the local address it gives you after running `gulp` (usually something like 'localhost:3000'). After that, if you quit and re-run gulp, you will need to reload the page manually just for the first time. If you prefer opening a new tab every time, simply change `open: false` to `open: true` in the browsersync settings in gulpfile.js.
 
 **jekyll**
 
