@@ -2,41 +2,50 @@
    #MEDIA ITEMS/LIST
    ========================================================================== */
 
-/*   .c-media {
-   		@include desktop {
-      		@extend .o-block;
-    	}
-    	@include tablet {
-      		@extend .o-flag;
-    	}
-    	@include mobile {
-      		@extend .o-flag;
-    	}
+.c-media {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  display: table-row;
+  overflow: hidden;
+}
+.c-media__img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  padding-right: 1em;
 
+  	img {
+  		display: block;
+  		width: 100%;
+  		height: auto;
+  	}
+}
+.c-media__text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;
 
-   }
+  h4, p {
+  margin: 0;
+  } 
+}
 
-   .c-media__img {
-   		@include desktop {
-      		@extend .o-block__image;
-    	}
-    	@include tablet {
-      		@extend .o-flag__image;
-    	}
-    	@include mobile {
-      		@extend .o-flag__image;
-    	}
-   }
+//variants
 
-   .c-media__body {
-   		@include desktop {
-      		
-    	}
-    	@include tablet {
-      		@extend .o-flag__body;
-    	}
-    	@include mobile {
-      		@extend .o-flag__body;
-   		}
-   	}*/
-  
+.c-media--block {
+	background: #FFFC33;
+	border: 1px solid black;
+	@include mq($from: desktop) {
+	.c-media__img {
+    width: 100%;
+    padding-right: 0;
+    float: left;
+}
+.c-media__text {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+}
+  }

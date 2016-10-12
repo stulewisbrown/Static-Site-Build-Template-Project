@@ -3,7 +3,7 @@ layout: post
 title:  "Method Man to name his newborn son after Ian Beale"
 date:   2016-08-03 09:11:03
 categories: news
-img: https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Ian_Beale.jpg/200px-Ian_Beale.jpg
+img: http://placehold.it/200x150
 ---
 Apparently Method Man is a huge fan of Eastenders, particularly the character Ian Beale whom he has decided will be the namesake of his seventh son.
 

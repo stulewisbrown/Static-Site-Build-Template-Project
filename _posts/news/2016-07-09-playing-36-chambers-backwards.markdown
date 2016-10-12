@@ -3,7 +3,7 @@ layout: post
 title:  "You won't believe what happends playing 36 Chambers backwards"
 date:   2016-07-09 09:11:03
 categories: news
-img: http://static.spin.com/files/131105-enter-the-wu-tang-36-chambers.jpg
+img: http://placehold.it/200x150
 ---
 Led Zeppelin and The Beatles are not the only people to supposedly backmask hidden messages through their music... Enter the Wu Tang.
 

@@ -1,0 +1,12 @@
+{% for post in site.categories.news limit:3 %}
+		<div class="o-layout__item  u-1/1  u-1/3@tablet">
+			<a href="{{ post.url }}" class="c-media">
+					<div class="c-media__img">
+						<img src="{{ post.img }}">
+					</div>
+				    <div class="c-media__text">
+						<h4>{{ post.title }}</h4>
+					</div>
+			</a>
+		</div> <!-- /o-layout__item -->
+{% endfor %}

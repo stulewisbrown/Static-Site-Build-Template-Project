@@ -3,7 +3,7 @@ layout: post
 title:  "RZA for President"
 date:   2016-09-01 09:11:03
 categories: news
-img: //upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/300px-Flag_of_the_United_States.svg.png
+img: http://placehold.it/200x150
 ---
 The RZA is running for president!
 
