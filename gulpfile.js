@@ -74,6 +74,8 @@ gulp.task('scripts', function() {
     .pipe(jshint.reporter('default'))
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(browserSync.reload({stream:true}))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('js'))

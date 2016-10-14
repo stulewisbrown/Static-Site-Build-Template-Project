@@ -8,6 +8,7 @@
   width: 100%;
   display: table-row;
   overflow: hidden;
+  background: #FF4933;
 }
 .c-media__img {
   display: table-cell;
@@ -36,16 +37,17 @@
 .c-media--block {
 	background: #FFFC33;
 	border: 1px solid black;
+
 	@include mq($from: desktop) {
-	.c-media__img {
-    width: 100%;
-    padding-right: 0;
-    float: left;
-}
-.c-media__text {
-    width: 100%;
-    float: left;
-    text-align: center;
-}
-}
+		.c-media__img {
+		    width: 100%;
+		    padding-right: 0;
+		    float: left;
+		}
+		.c-media__text {
+		    width: 100%;
+		    float: left;
+		    text-align: center;
+		}
+	}
   }
