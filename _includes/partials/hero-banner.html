@@ -1,0 +1,14 @@
+{% if include.content == nil %}
+	<section style="background-image:url(http://www.tescobank.com/assets/website/img/bg/homepage-hero-touch@1600px.jpg);" class="c-hero {{include.class}}">
+		<h2 class="c-hero__text">Welcome to my website<br/>Take a look around</h2>
+	</section>
+{% else %}
+	<section style="background-image:url({{include.imgsrc}});" class="c-hero {{include.class}}">
+		{% include {{include.content}} %}
+	</section>
+{% endif %}
+<!--
+{% comment %}
+example of include params
+{% include partials/hero-banner.html class="c-hero--overlay" imgsrc="http://www.tescobank.com/assets/website/img/bg/homepage-hero-touch@1600px.jpg" content="kitchensink/hero-banner-example.html" %}
+{% endcomment %} -->

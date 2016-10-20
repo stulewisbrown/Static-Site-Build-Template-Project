@@ -85,6 +85,7 @@
 @import "tools/tools.clearfix";
 @import "tools/tools.hidden";
 @import "tools/tools.float";
+@import "tools/tools.aliases";
 @import "../node_modules/sass-mq/mq";
 
 
@@ -148,6 +149,8 @@
 @import "components/components.breadcrumb";
 @import "components/components.table";
 @import "components/components.menu";
+@import "components/components.footer";
+@import "components/components.hero-banner";
 
 
 
@@ -163,6 +166,7 @@ $inuit-offsets: true;
 @import "utilities/utilities.spacing";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
+@import "utilities/utilities.hr";
 
 
 

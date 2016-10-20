@@ -1,0 +1,49 @@
+/* ==========================================================================
+   #HERO-BANNER
+   ========================================================================== */
+
+.c-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding: $inuit-global-spacing-unit;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+.c-hero__text {
+    background: none;
+    color: #fff;
+    padding: $inuit-global-spacing-unit;
+    transition: all 0.2s ease;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    width: 50%;
+
+    @include mq($until: tablet) {
+        width: 100%;
+    }
+
+
+    @include mq($until: desktop) {
+        padding: 0;
+    }
+}
+
+/*variants*/
+.c-hero--overlay {
+    @include mq($until: tablet) {
+        padding: 0;
+    }
+
+
+    .c-hero__text {
+        background: rgba(0, 0, 0, 0.5);
+
+        @include mq($until: desktop) {
+            padding: $inuit-global-spacing-unit;
+        }
+    }
+}

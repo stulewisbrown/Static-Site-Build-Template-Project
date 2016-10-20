@@ -1,0 +1,12 @@
+<a href="#" data-menu-selector='{{include.num}}' class="c-menu-toggle">Menu1</a>
+<nav class="c-menu" role="navigation">
+	<ul data-menu-selector='{{include.num}}' class="o-list-bare  c-menu__ul">
+		{% include {{include.content}} %}
+	</ul>
+</nav>
+
+<!-- 
+{% comment %}
+when using include - use the num parameter to pass the id of the menu (for multiple menus)
+{% include partials/menu.html num="2" content="kitchensink/menu-example.html" %}
+{% endcomment %} -->

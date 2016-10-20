@@ -1,0 +1,14 @@
+<section class="o-layout">
+	{% for post in site.categories.news limit:3 %}
+		<div class="o-layout__item u-1/1">
+			<a href="{{ post.url }}" class="c-media">
+				<div class="c-media__img">
+					<img src="{{ post.img }}" alt="Image Alt Text" />
+				</div>
+				<div class="c-media__text">
+					<h4>{{ post.title }}</h4>
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+</section>
