@@ -5,9 +5,14 @@
 .c-hero {
     position: relative;
     background-size: cover;
-    background-position: center bottom;
+    background-position: center top;
     background-repeat: no-repeat;
-    padding: $inuit-global-spacing-unit;
+    padding: $spacing;
+
+    @include mq($until: tablet) {
+        text-align: center;
+    }
+
 
     h2 {
         margin-bottom: 0;
@@ -17,10 +22,9 @@
 .c-hero__text {
     background: none;
     color: #fff;
-    padding: $inuit-global-spacing-unit;
+    padding: $spacing;
     transition: all 0.2s ease;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-    width: 50%;
 
     @include mq($until: tablet) {
         width: 100%;
@@ -31,6 +35,8 @@
         padding: 0;
     }
 }
+
+.c-hero-banner__img {}
 
 /*variants*/
 .c-hero--overlay {
@@ -47,3 +53,5 @@
         }
     }
 }
+
+.c-hero--imagery {}

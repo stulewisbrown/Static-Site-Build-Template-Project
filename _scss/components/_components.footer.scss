@@ -5,6 +5,7 @@
 .c-footer {
     background: #31DAFF;
     color: white;
+    padding: $spacing;
 
     @include mq($until: mobile) {
         text-align: center;

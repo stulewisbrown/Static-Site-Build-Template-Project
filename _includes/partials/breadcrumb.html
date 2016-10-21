@@ -4,7 +4,7 @@
     <ol class="o-list-inline c-breadcrumb {{include.class}}" vocab="http://schema.org/" typeof="BreadcrumbList">
       {% if include.content == nil %}
         <li class="o-list-inline__item {% if crumb.url == page.url %} active{% endif %}" property="itemListElement" typeof="ListItem">
-          <a class="u-padding-left-tiny" href={{ "/" | prepend: site.baseurl | prepend: site.url }}>Home</a>
+          <a href={{ "/" | prepend: site.baseurl | prepend: site.url }}>Home</a>
         </li>
         <!-- Iteration breadcrumb item -->
         {% assign position = 0 %}
@@ -30,7 +30,7 @@
             {% assign position = position  | plus: 1 %}
 
             <li class="o-list-inline__item{% if crumb.url == page.url %} active{% endif %}" property="itemListElement" typeof="ListItem">
-              <a class="u-padding-left-tiny" property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl | prepend: site.url }}">
+              <a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl | prepend: site.url }}">
               <span property="name">{{ caption }}</span>
               </a>
               <meta property="position" content="{{ position }}" />

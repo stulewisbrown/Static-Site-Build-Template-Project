@@ -9,6 +9,10 @@
     overflow: hidden;
     height: $line-height;
 
+    li {
+        margin-left: $spacing-tiny;
+    }
+
     li a {
         color: purple;
         text-decoration: none;

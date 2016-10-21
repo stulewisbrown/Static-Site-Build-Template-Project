@@ -15,16 +15,7 @@
  */
 
 html {
-  /*font-size: ($inuit-global-font-size / 16px) * 1em;*/ /* [1] */
-  font-size: inuit-rem($inuit-global-font-size);
-/*    @include mq($from: mobile, $until: tablet) {
-  	  font-size: inuit-rem(($inuit-global-font-size / 100) * 120);
-
-  }
-  @include mq($from: tablet) {
-  	  font-size: inuit-rem(($inuit-global-font-size / 100) * 120);
-
-  }*/
+  font-size: ($inuit-global-font-size / 16px) * 1em; /* [1] */
   line-height: $inuit-global-line-height / $inuit-global-font-size; /* [1] */
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */

@@ -4,32 +4,36 @@
 
 .c-media {
     display: table;
-    border-collapse: collapse;
     width: 100%;
-    display: table-row;
-    overflow: hidden;
     background: #FF4933;
+    height: 100px;
 }
 
 .c-media__img {
     display: table-cell;
     vertical-align: middle;
-    width: 20%;
-    padding-right: 1em;
-
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+    width: 40%;
+    background-position: center;
+    background-size: cover;
 }
 
 .c-media__text {
     display: table-cell;
     vertical-align: middle;
-    width: 80%;
+    width: 60%;
+    padding-left: $spacing-small;
 
-    h4, p {
+    h4 {
+        margin: 0;
+
+        @include inuit-font-size(16px);
+
+        @include mq($from: tablet, $until: desktop) {
+            @include inuit-font-size(12px);
+        }
+    }
+
+    p {
         margin: 0;
     }
 }

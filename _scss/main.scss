@@ -72,6 +72,8 @@
 
 // SETTINGS
 @import "settings/example.settings.config";
+$inuit-global-font-size:   16px;
+$inuit-global-line-height: 32px;
 @import "settings/settings.core";
 @import "settings/example.settings.global";
 
@@ -151,6 +153,7 @@
 @import "components/components.menu";
 @import "components/components.footer";
 @import "components/components.hero-banner";
+@import "components/components.post-content";
 
 
 
