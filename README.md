@@ -1,4 +1,4 @@
-jekyll-gulp-sass-browser-sync
+Site Build Template - powerful &
 =============================
 
 A starter project including full setup for Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync

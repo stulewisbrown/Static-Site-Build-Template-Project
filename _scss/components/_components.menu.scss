@@ -28,9 +28,9 @@
 }
 
 .c-menu__ul.active {
-    /*	be careful of this - to achieve the css transition without using JS, max-height must higher
-    	than all menu's are. This will result in inconsistent timings as no matter the menu size, 
-    	the transition will always be to the max-height, not the size of the menu*/
+    /*  be careful of this - to achieve the css transition without using JS, max-height must higher
+        than all menu's are. This will result in inconsistent timings as no matter the menu size, 
+        the transition will always be to the max-height, not the size of the menu*/
     max-height: 30rem;
 }
 

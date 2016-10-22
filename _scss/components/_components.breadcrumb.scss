@@ -47,10 +47,11 @@
         position: relative;
         display: block;
         float: left;
+        padding-left: $spacing;
 
-        @include mq($until: tablet) {
-            padding: 0 0 0 30rem;
-        }
+        /*        @include mq($until: tablet) {
+                    padding: 0 0 0 30rem;
+                }*/
     }
 
     li + li:before {
