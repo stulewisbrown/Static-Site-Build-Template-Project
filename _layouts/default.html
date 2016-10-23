@@ -2,19 +2,19 @@
 <html>
     <head>
 
-{% include head.html %}
+{% include partials/head.html %}
     </head>
-    <body>
+    <body class="o-wrapper">
 
-        {% include navbar.html %}
+        {% include partials/navbar.html %}
 
-        {% include breadcrumb.html %}
+        {% include partials/breadcrumb.html %}
 
         {{ content }}
 
-        {% include footer.html %}
+        {% include partials/footer.html %}
 
     <script src="/jquery.js"></script>
-    <script src="/js/scripts.min.js"></script>
+    <script src="/js/scripts.js"></script>
     </body>
 </html>

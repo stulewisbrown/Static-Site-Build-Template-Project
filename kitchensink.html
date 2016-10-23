@@ -1,0 +1,88 @@
+---
+layout: default
+title: Kitchen Sink
+navigation-order: 3
+---
+<h1>Kitchen Sink</h1>
+<p>Everything you need to know about using this site template</p>
+<article class="o-layout">
+	<div class="o-layout__item u-1/1 u-1/4@tablet">
+		{% include partials/menu.html num="1" content="kitchensink/menu-anchor.html" %}
+	</div>
+	<div class="o-layout__item u-1/1 u-3/4@tablet">
+		<!-- /* ==========================================================================
+		#NAVIGATION
+		========================================================================== */ -->
+		<h2 id="navigation">Navigation</h2>
+		<p>These are your navigation options</p>
+		<h6>Default</h6>
+		{% include partials/navbar.html content="kitchensink/navbar-example.html" %}
+		<h6>Centred</h6>
+		{% include partials/navbar.html class="c-nav--centred" content="kitchensink/navbar-example.html" %}
+		<h6>Left</h6>
+		{% include partials/navbar.html class="c-nav--left" content="kitchensink/navbar-example.html" %}
+		<hr>
+		<!-- /* ==========================================================================
+		#BUTTONS
+		========================================================================== */ -->
+		<h2 id="buttons">Buttons</h2>
+		<p>These are your button options</p>
+		<div class="o-layout">
+			<div class="o-layout__item o-layout--center u-1/1 u-1/3@mobile">
+				<h6>Primary button</h6>
+				<a class="c-btn c-btn--primary">Button 1</a>
+			</div>
+			<div class="o-layout__item o-layout--center u-1/1 u-1/3@mobile">
+				<h6>Secondary button</h6>
+				<a class="c-btn c-btn--secondary">Button 2</a>
+			</div>
+			<div class="o-layout__item o-layout--center u-1/1 u-1/3@mobile">
+				<h6>Tertiary button</h6>
+				<a class="c-btn c-btn--tertiary">Button 3</a>
+			</div>
+		</div>
+		<hr>
+		<!-- /* ==========================================================================
+		#MEDIA
+		========================================================================== */ -->
+		<h2 id="media">Media</h2>
+		<p>a commonly occuring design pattern for news or media list items</p>
+		{% include partials/media.html %}
+		{% include partials/media.html class="c-media--block" content="kitchensink/media-example.html" %}
+		
+		<hr>
+		<!-- /* ==========================================================================
+		#BREADCRUMB
+		========================================================================== */ -->
+		<h2 id="breadcrumb">Breadcrumb</h2>
+		{% include partials/breadcrumb.html %}
+		{% include partials/breadcrumb.html class="c-breadcrumb--triangles" content="kitchensink/breadcrumb-example.html" %}
+		
+		<hr>
+		<!-- /* ==========================================================================
+		#MENU
+		========================================================================== */ -->
+		<h2 id="menu">Menu</h2>
+		{% include partials/menu.html num="2" content="kitchensink/menu-example.html" %}
+		<hr>
+		<!-- /* ==========================================================================
+		#FOOTER
+		========================================================================== */ -->
+		<h2 id="footer">Footer</h2>
+		{% include partials/footer.html %}
+		<h6>Centred</h6>
+		{% include partials/footer.html class="c-footer--centred" content="kitchensink/footer-example.html" %}
+		
+		<hr>
+		<!-- /* ==========================================================================
+		#HERO BANNER
+		========================================================================== */ -->
+		<h2 id="hero-banner">Hero banner</h2>
+		{% include partials/hero-banner.html %}
+		<h6>Overlay</h6>
+		{% include partials/hero-banner.html class="c-hero--overlay" imgsrc="http://www.tescobank.com/assets/website/img/bg/homepage-hero-touch@1600px.jpg" content="kitchensink/hero-banner-example.html" %}
+		
+		<hr>
+		</div><!-- o-layout__item u-3/4 -->
+	</div>
+</article>

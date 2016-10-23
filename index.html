@@ -3,24 +3,41 @@ layout: default
 title: Home
 navigation-order: 1
 ---
-
-<img id="homeImg" src="http://placehold.it/500x200">
-
-
-<div class="wrapper">
-
-  <article class="main">
-    	{% for post in site.posts %}
-      	<p><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></p>
-    	{% endfor %}
-
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-	</p>
-	<p>
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
-  </article>
-</div>
-
-{% include contacts.html %}
+{% include partials/hero-banner.html class="u-margin-bottom" %}
+<div class="o-layout">
+	<div class="o-layout__item u-1/1 u-2/3@tablet">
+		<article>
+			<h2>OK, so what is this?</h2>
+			<p>
+				This is a static blog style website built on a load of awesome, up-to-date principles of web developement.
+			</p>
+			<h3>Here's a list:</h3>
+			<ul>
+				<li>Totally responsive</li>
+				<li>Totally browser compatible</li>
+				<li>Totally modular (see <a href="/kitchensink.html">Kitchen Sink</a> page for examples of components)</li>
+				<li>Totally all about BEM principles</li>
+				<li>Totally HTML5 and CSS3 compliant (with fallbacks of course)</li>
+			</ul>
+			<p>
+				There's a load of great tech behind the build of the site as well
+			</p>
+			<h3>Here's another list:</h3>
+			<ul>
+				<li>Inuit CSS framework</li>
+				<li>Jekyll static site generator</li>
+				<li>Gulp build system - used to implement awesome stuff like:</li>
+				<ul>
+					<li>Browser Sync</li>
+					<li>Jekyll build/rebuild commands</li>
+					<li>Autoprefixing, concatenation, minification...</li>
+					<li>To see the rest, check out the <a href="http://www.github.com/stub2001/jekyll-gulp-project" target="_blank">github repo</a> for the build files</li>
+				</ul>
+			</ul>
+		</article>
+	</div>
+	<div class="o-layout__item u-1/1 u-1/3@tablet">
+		<h3>Blog articles</h3>
+		{% include partials/media.html %}
+	</div>
+</div><!-- end o-layout -->

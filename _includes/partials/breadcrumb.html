@@ -1,0 +1,64 @@
+{% capture url %}{% if page.language%}{{ page.url | remove: "/" | remove: page.language }}{% else %}{{ page.url | remove: "/" }}{% endif %}{% endcapture %}
+{% if url.size > 0 %}
+  <nav>
+    <ol class="o-list-inline c-breadcrumb {{include.class}}" vocab="http://schema.org/" typeof="BreadcrumbList">
+      {% if include.content == nil %}
+        <li class="o-list-inline__item {% if crumb.url == page.url %} active{% endif %}" property="itemListElement" typeof="ListItem">
+          <a href={{ "/" | prepend: site.baseurl | prepend: site.url }}>Home</a>
+        </li>
+        <!-- Iteration breadcrumb item -->
+        {% assign position = 0 %}
+        {% for crumb in breadcrumbs %}
+
+            <!-- Skip if root -->
+            {% if crumb.url == "/" %}
+              {% continue %}
+            {% endif %}
+
+            <!-- Skip if language directory -->
+            {% if page.language %}
+              {% assign langpath = crumb.url | remove: "/" %}
+              {% if langpath == page.language %}
+                {% continue %}
+              {% endif %}
+            {% endif %}
+
+            <!-- Get breadcrumb title. Insert snippet from configuration description to translates breadcrumb if language plugin is installed and YAML subset is set -->
+            {% assign caption = crumb.title %}
+
+            <!-- SEO data -->
+            {% assign position = position  | plus: 1 %}
+
+            <li class="o-list-inline__item{% if crumb.url == page.url %} active{% endif %}" property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl | prepend: site.url }}">
+              <span property="name">{{ caption }}</span>
+              </a>
+              <meta property="position" content="{{ position }}" />
+            </li>
+
+          {% endfor %}
+      {% else %}
+        {% include {{include.content}} %}
+      {% endif %}
+    </ol>
+
+  </nav>
+{% endif %}
+
+
+<!--
+{% comment %}
+
+      {% if crumb.url != page.url %}<a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+        <span property="name">{{ caption }}</span>
+         {% if crumb.url != page.url %}</a>
+         //{% endif %}
+
+replace with this if you don't want to be able to click on the current page
+
+example of include params
+{% include partials/breadcrumb.html content="dynamic" class="c-breadcrumb--triangles" %}
+to override the dynamic functionality, replace "dynamic" with the root to the content you wish to use
+{% endcomment %}
+
+-->

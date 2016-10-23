@@ -1,0 +1,27 @@
+{% if include.content == nil %}
+	<section class="o-layout">
+		{% for post in site.categories.news limit:3 %}
+			<div class="o-layout__item  u-1/1">
+				<a href="{{ post.url }}" class="c-media u-margin-bottom-small {{include.class}}">
+					<div class="c-media__img" style="background-image: url({{ post.img }})">
+					</div>
+					<div class="c-media__text">
+						<h4>{{ post.title }}</h4>
+					</div>
+				</a>
+			</div>
+		{% endfor %}
+	</section>
+{% else %}
+	<div class="o-layout">
+		<div class="o-layout__item  u-margin-bottom-small u-1/1">
+			<a href="#" class="c-media {{include.class}}">
+				{% include {{include.content}} %}
+			</a>
+		</div>
+	</div>
+{% endif %}
+<!--
+{% comment %}
+{% include partials/media.html class="c-media--block" content="kitchensink/media-example.html" %}
+{% endcomment %} -->
