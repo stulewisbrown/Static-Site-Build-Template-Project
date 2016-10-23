@@ -14,7 +14,7 @@
 .c-nav__item {
     padding: 0.5em;
 
-    @include mobile {
+    @include mq($until: tablet) {
         &:not(:nth-child(-n+3)) {
             display: none;
         }
@@ -34,7 +34,7 @@
 .c-nav__icon {
     display: none;
 
-    @include mobile {
+    @include mq($until: tablet) {
         float: right;
         display: inline-block !important;
     }
