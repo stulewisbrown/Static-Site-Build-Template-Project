@@ -70,9 +70,10 @@ Here you assign it the layout you want (see _layouts file), the page name and wh
 
 ### Includes
 
-You can import your components to make up your page with the use of the `{% include %}` tag. Jekyll uses the [liquid](https://help.shopify.com/themes/liquid) templating language to pass parameters around and work with dynamic content. 
+You can import your components to make up your page with the use of the `{% include %}` tag. Jekyll uses the [liquid templating language](https://help.shopify.com/themes/liquid) to pass parameters around and work with dynamic content. 
 
 Say that we want to use a hero-banner at the top of a page we could write something like:
+
 `{% include partials/hero-banner.html %}`
 
 This will look into our includes folder, and we've specified the file we want it to include in our page. Easy.
@@ -80,6 +81,7 @@ This will look into our includes folder, and we've specified the file we want it
 #### Custom Parameters
 
 We can also pass it parameters through including custom attributes in our tag such as:
+
 `{% include partials/hero-banner.html imgsrc="/bg/homepage-hero-touch@1600px.jpg" %}`
 
 How does this work? If we look in any of our already existing partial files we can see a lot of liquid template logic going on which is often there to react to whether or not we've passed in a custom parameter in the include. In this case we've passed in 'imgsrc' value.
@@ -98,7 +100,12 @@ If imgsrc doesn't exist, use the default site banner, if not, use the value in i
 
 #### Custom Classes
 
-If you want to extend the component with an extender class, you can usually simply pass this in with `class="example--extender"` so long as the logic is set up in the partial file to accomodate this. Again, the HTML (with the liquid logic) would look something like this: 
+If you want to extend the component with an extender class, you can usually simply pass this in with 
+
+`{% include partials/hero-banner.html class="example--extender" %]` 
+
+so long as the logic is set up in the partial file to accomodate this. Again, the HTML (with the liquid logic) would look something like this: 
+
 `class="c-hero {{include.class}}"`
 
 #### Custom Content
@@ -108,6 +115,7 @@ You don't want every component on your site to have the same content do you? You
 `{% include partials/hero-banner.html class="c-hero--overlay" imgsrc="/bg/homepage-hero-touch@1600px.jpg" content="kitchensink/hero-banner-example.html" %}`
 
 This time we've included a 'content' attribute. The logic in the partial file 'partials/hero-banner.html' is looking for this content value to be passed. If it sees it, it doesn't use the default content for the component, rather uses the value of 'content' as the source of your custom content to be included. In this case that would be 'kitchensink/hero-banner-example.html'. So our partial files also use includes to optionally include custom content: 
+
 `{% include {{include.content}} %}`
 
 ## Inuit
@@ -131,6 +139,7 @@ All components that are included on the site are pretty much designed to take th
 ### Spacing
 
 Most components also come with no margins around them so they can stack like blocks. Obviously in most situations you're going to want to apply some margins, so be sure to achieve this by passing in a custom class in the include tag (see Custom Classes above). You can use inuit's spacing suite of classes for this. e.g:
+
 `{% include partials/hero-banner.html class="u-margin-bottom" %}`
 
 To get a consistent vertical rhythm, be sure to always use inuits spacing units rather than arbitrary '[magic numbers](http://csswizardry.com/2012/11/code-smells-in-css/#magic-numbers)'.
