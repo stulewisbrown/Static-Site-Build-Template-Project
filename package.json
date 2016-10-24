@@ -21,7 +21,7 @@
         "gulp-sass": "^2.1.0",
         "sass-mq": "^3.2.9",
         "gulp-rename": "^1.2.2",
-        "gulp-uglify": "^2.0.0",
+        "gulp-uglify": "^2.0.0"
     },
     "repository": {
         "type": "git",
