@@ -1,0 +1,13 @@
+{% if include.content == nil %}
+	<section style="background-image:url(/assets/pebbles_4-wallpaper-960x600.jpg);" class="c-feat {{include.class}}">
+		<div class="c-feat__text">
+			<p>Bryan Cranston has admitted he has been buying his own book and leaving it on bookshop shelves as a surprise gift for fans.</p>
+			<p>Makenna Enfinger tweeted a picture of a note she found, apparently from Bryan, in a copy of his autobiography 'A Life in Parts' at an airport in Dallas.</p>
+			<p>Speaking to 5 Live's Afternoon Edition, the Breaking Bad actor confirmed that he has secretly leaving copies of his book, A Life in Parts in airport shops for some time.</p>
+		</div>
+	</section>
+{% else %}
+	<section style="background-image:url({{ imgsrc }});" class="c-hero {{include.class}}">
+		{% include {{include.content}} %}
+	</section>
+{% endif %}
