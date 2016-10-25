@@ -1,13 +1,135 @@
----
-layout: default
-title: Kitchen Sink
-navigation-order: 3
----
-<h1>Kitchen Sink</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Kitchen Sink</title>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body class="o-wrapper">
+
+        <nav>
+	<ul class="c-nav ">
+		
+			
+			
+				
+					<li class="c-nav__item">
+						<a href="/" class=" c-nav__item__link">
+						Home</a>
+					</li>
+				
+				
+			
+				
+					<li class="c-nav__item">
+						<a href="/about.html" class=" c-nav__item__link">
+						About</a>
+					</li>
+				
+				
+			
+				
+					<li class="c-nav__item">
+						<a href="/kitchensink.html" class="active c-nav__item__link">
+						Kitchen Sink</a>
+					</li>
+				
+				
+			
+				
+					<li class="c-nav__item">
+						<a href="/example.html" class=" c-nav__item__link">
+						Example</a>
+					</li>
+				
+				
+					
+						<li class="c-nav__item c-nav__icon" id="js-icon">
+							<a href="#" class="c-nav__item__link">&#9776;</a>
+						</li>
+					
+				
+			
+		
+	</ul>
+</nav>
+
+
+<!-- 
+ -->
+
+        
+
+  <nav>
+    <ol class="o-list-inline c-breadcrumb " vocab="http://schema.org/" typeof="BreadcrumbList">
+      
+        <li class="o-list-inline__item " property="itemListElement" typeof="ListItem">
+          <a href=/>Home</a>
+        </li>
+        <!-- Iteration breadcrumb item -->
+        
+        
+
+            <!-- Skip if root -->
+            
+              
+
+            <!-- Skip if root -->
+            
+
+            <!-- Skip if language directory -->
+            
+
+            <!-- Get breadcrumb title. Insert snippet from configuration description to translates breadcrumb if language plugin is installed and YAML subset is set -->
+            
+
+            <!-- SEO data -->
+            
+
+            <li class="o-list-inline__item active" property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="/kitchensink.html">
+              <span property="name">Kitchen Sink</span>
+              </a>
+              <meta property="position" content="1" />
+            </li>
+
+          
+      
+    </ol>
+
+  </nav>
+
+
+
+<!--
+
+
+-->
+
+
+        <h1>Kitchen Sink</h1>
 <p>Everything you need to know about using this site template</p>
 <article class="o-layout">
 	<div class="o-layout__item u-1/1 u-1/4@tablet">
-		{% include partials/menu.html num="1" content="kitchensink/menu-anchor.html" %}
+		<a href="#" data-menu-selector='1' class="c-menu-toggle">Menu1</a>
+<nav class="c-menu" role="navigation">
+	<ul data-menu-selector='1' class="o-list-bare  c-menu__ul">
+		<li><a href="#navigation">Navigation</a></li>
+<li><a href="#buttons">Buttons</a></li>
+<li><a href="#media">Media</a></li>
+<li><a href="#breadcrumb">Breadcrumb</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#footer">Footer</a></li>
+<li><a href="#hero-banner">Hero Banner</a></li>
+	</ul>
+</nav>
+
+<!-- 
+ -->
 	</div>
 	<div class="o-layout__item u-1/1 u-3/4@tablet">
 		<!-- /* ==========================================================================
@@ -16,11 +138,65 @@ navigation-order: 3
 		<h2 id="navigation">Navigation</h2>
 		<p>These are your navigation options</p>
 		<h6>Default</h6>
-		{% include partials/navbar.html content="kitchensink/navbar-example.html" %}
+		<nav>
+	<ul class="c-nav ">
+		
+			<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 1</a>
+</li>
+<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 2</a>
+</li>
+<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 3</a>
+</li>
+		
+	</ul>
+</nav>
+
+
+<!-- 
+ -->
 		<h6>Centred</h6>
-		{% include partials/navbar.html class="c-nav--centred" content="kitchensink/navbar-example.html" %}
+		<nav>
+	<ul class="c-nav c-nav--centred">
+		
+			<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 1</a>
+</li>
+<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 2</a>
+</li>
+<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 3</a>
+</li>
+		
+	</ul>
+</nav>
+
+
+<!-- 
+ -->
 		<h6>Left</h6>
-		{% include partials/navbar.html class="c-nav--left" content="kitchensink/navbar-example.html" %}
+		<nav>
+	<ul class="c-nav c-nav--left">
+		
+			<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 1</a>
+</li>
+<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 2</a>
+</li>
+<li class="c-nav__item"><a href="#" class="c-nav__item__link">
+Item 3</a>
+</li>
+		
+	</ul>
+</nav>
+
+
+<!-- 
+ -->
 		<hr>
 		<!-- /* ==========================================================================
 		#BUTTONS
@@ -47,42 +223,268 @@ navigation-order: 3
 		========================================================================== */ -->
 		<h2 id="media">Media</h2>
 		<p>a commonly occuring design pattern for news or media list items</p>
-		{% include partials/media.html %}
-		{% include partials/media.html class="c-media--block" content="kitchensink/media-example.html" %}
+		
+	<section class="o-layout">
+		
+			<div class="o-layout__item  u-1/1">
+				<a href="/news/2016/09/01/white-lung-new-release.html" class="c-media u-margin-bottom-small ">
+					<div class="c-media__img" style="background-image: url(http://cdn3.pitchfork.com/albums/23189/homepage_large.b88066c8.jpg)">
+					</div>
+					<div class="c-media__text">
+						<h4>White Lung's new album is really something</h4>
+					</div>
+				</a>
+			</div>
+		
+			<div class="o-layout__item  u-1/1">
+				<a href="/news/2016/08/03/danny-brown-new-album.html" class="c-media u-margin-bottom-small ">
+					<div class="c-media__img" style="background-image: url(http://cdn2.pitchfork.com/albums/23910/homepage_large.7d68020e.jpg)">
+					</div>
+					<div class="c-media__text">
+						<h4>Danny Brown releases new album Atrocity Exhibition</h4>
+					</div>
+				</a>
+			</div>
+		
+			<div class="o-layout__item  u-1/1">
+				<a href="/news/2016/07/09/shaggs-reissue.html" class="c-media u-margin-bottom-small ">
+					<div class="c-media__img" style="background-image: url(http://cdn4.pitchfork.com/albums/23822/homepage_large.31079d0a.jpg)">
+					</div>
+					<div class="c-media__text">
+						<h4>The Shaggs get a reissue</h4>
+					</div>
+				</a>
+			</div>
+		
+	</section>
+
+<!--
+ -->
+
+		
+	<div class="o-layout">
+		<div class="o-layout__item  u-margin-bottom-small u-1/1">
+			<a href="#" class="c-media c-media--block">
+				<div class="c-media__img">
+	<img src="http://placehold.it/1500x150">
+</div>
+<div class="c-media__text">
+	<h4>Media title</h4>
+</div>
+			</a>
+		</div>
+	</div>
+
+<!--
+ -->
+
 		
 		<hr>
 		<!-- /* ==========================================================================
 		#BREADCRUMB
 		========================================================================== */ -->
 		<h2 id="breadcrumb">Breadcrumb</h2>
-		{% include partials/breadcrumb.html %}
-		{% include partials/breadcrumb.html class="c-breadcrumb--triangles" content="kitchensink/breadcrumb-example.html" %}
+		
+
+  <nav>
+    <ol class="o-list-inline c-breadcrumb " vocab="http://schema.org/" typeof="BreadcrumbList">
+      
+        <li class="o-list-inline__item " property="itemListElement" typeof="ListItem">
+          <a href=/>Home</a>
+        </li>
+        <!-- Iteration breadcrumb item -->
+        
+        
+
+            <!-- Skip if root -->
+            
+              
+
+            <!-- Skip if root -->
+            
+
+            <!-- Skip if language directory -->
+            
+
+            <!-- Get breadcrumb title. Insert snippet from configuration description to translates breadcrumb if language plugin is installed and YAML subset is set -->
+            
+
+            <!-- SEO data -->
+            
+
+            <li class="o-list-inline__item active" property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="/kitchensink.html">
+              <span property="name">Kitchen Sink</span>
+              </a>
+              <meta property="position" content="1" />
+            </li>
+
+          
+      
+    </ol>
+
+  </nav>
+
+
+
+<!--
+
+
+-->
+
+		
+
+  <nav>
+    <ol class="o-list-inline c-breadcrumb c-breadcrumb--triangles" vocab="http://schema.org/" typeof="BreadcrumbList">
+      
+        <li class="o-list-inline__item" property="itemListElement" typeof="ListItem">
+	<a href="#">Home</a>
+</li>
+<li class="o-list-inline__item" property="itemListElement" typeof="ListItem">
+	<a href="#">About</a>
+</li>
+<li class="o-list-inline__item" property="itemListElement" typeof="ListItem">
+	<a href="#">More about us</a>
+</li>
+      
+    </ol>
+
+  </nav>
+
+
+
+<!--
+
+
+-->
+
 		
 		<hr>
 		<!-- /* ==========================================================================
 		#MENU
 		========================================================================== */ -->
 		<h2 id="menu">Menu</h2>
-		{% include partials/menu.html num="2" content="kitchensink/menu-example.html" %}
+		<a href="#" data-menu-selector='2' class="c-menu-toggle">Menu1</a>
+<nav class="c-menu" role="navigation">
+	<ul data-menu-selector='2' class="o-list-bare  c-menu__ul">
+		<li><a href="#">Menu item 1</a></li>
+<li><a href="#">Menu item 2</a></li>
+<li><a href="#">Menu item 3</a></li>
+	</ul>
+</nav>
+
+<!-- 
+ -->
 		<hr>
 		<!-- /* ==========================================================================
 		#FOOTER
 		========================================================================== */ -->
 		<h2 id="footer">Footer</h2>
-		{% include partials/footer.html %}
+		<footer class="c-footer ">
+  <div class="o-layout">
+    
+      <div class="o-layout__item u-1/1">
+        <h2>Footer</h2>
+      </div>
+      <div class="o-layout__item u-1/1">
+        <h3>Contact us</h3>
+      </div>
+      <div class="o-layout__item u-1/1 u-1/2@mobile">
+        <p>0207XXXXXXX</p>
+      </div>
+      <div class="o-layout__item u-1/1 u-1/2@mobile">
+        <p>LONDON<br/>
+          69 Old Street<br/>
+          London<br/>
+          EX12456
+        </p>
+      </div>
+    
+  </div>
+</footer>
+<!--
+ -->
 		<h6>Centred</h6>
-		{% include partials/footer.html class="c-footer--centred" content="kitchensink/footer-example.html" %}
+		<footer class="c-footer c-footer--centred">
+  <div class="o-layout">
+    
+          <div class="o-layout__item u-1/1">
+  <h2>Footer</h2>
+</div>
+<div class="o-layout__item u-1/1">
+  <h3>You can put stuff</h3>
+</div>
+<div class="o-layout__item u-1/1 u-1/2@mobile">
+  <p>and under here</p>
+</div>
+<div class="o-layout__item u-1/1 u-1/2@mobile">
+  <p>Wow even more stuff here
+  </p>
+</div>
+    
+  </div>
+</footer>
+<!--
+ -->
 		
 		<hr>
 		<!-- /* ==========================================================================
 		#HERO BANNER
 		========================================================================== */ -->
 		<h2 id="hero-banner">Hero banner</h2>
-		{% include partials/hero-banner.html %}
+		
+
+
+
+	<section style="background-image:url(/assets/banner@1280.jpg);" class="c-hero ">
+		<h2 class="c-hero__text">Welcome to my website<br/>Take a look around</h2>
+	</section>
+
+<!--
+ -->
 		<h6>Overlay</h6>
-		{% include partials/hero-banner.html class="c-hero--overlay" imgsrc="http://www.tescobank.com/assets/website/img/bg/homepage-hero-touch@1600px.jpg" content="kitchensink/hero-banner-example.html" %}
+		
+
+
+
+	<section style="background-image:url(http://www.tescobank.com/assets/website/img/bg/homepage-hero-touch@1600px.jpg);" class="c-hero c-hero--overlay">
+		<h2 class="c-hero__text">Oh look a bunch of text<br/>oh, some more</h2>
+	</section>
+
+<!--
+ -->
 		
 		<hr>
 		</div><!-- o-layout__item u-3/4 -->
 	</div>
 </article>
+
+        <footer class="c-footer ">
+  <div class="o-layout">
+    
+      <div class="o-layout__item u-1/1">
+        <h2>Footer</h2>
+      </div>
+      <div class="o-layout__item u-1/1">
+        <h3>Contact us</h3>
+      </div>
+      <div class="o-layout__item u-1/1 u-1/2@mobile">
+        <p>0207XXXXXXX</p>
+      </div>
+      <div class="o-layout__item u-1/1 u-1/2@mobile">
+        <p>LONDON<br/>
+          69 Old Street<br/>
+          London<br/>
+          EX12456
+        </p>
+      </div>
+    
+  </div>
+</footer>
+<!--
+ -->
+
+    <script src="/jquery.js"></script>
+    <script src="/js/scripts.js"></script>
+    </body>
+</html>
