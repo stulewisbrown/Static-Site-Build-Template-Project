@@ -25,7 +25,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/stub2001/jekyll-gulp-project.git"
+        "url": "https://github.com/stub2001/Static-Site-Build-Template-Project.git"
     },
     "keywords": [
         "jekyll",
@@ -33,5 +33,5 @@
         "sass",
         "browsersync"
     ],
-    "homepage": "https://github.com/stub2001/jekyll-gulp-project/"
+    "homepage": "https://github.com/stub2001/Static-Site-Build-Template-Project/"
 }
