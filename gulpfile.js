@@ -10,7 +10,6 @@ var concat = require('gulp-concat');
 var notify = require('gulp-notify');
 var cssmin = require('gulp-cssmin');
 var plumber = require('gulp-plumber');
-var clean = require('gulp-clean');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -23,7 +22,7 @@ var messages = {
 gulp.task('jekyll-build', function(done) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn(jekyll, ['build'], {
-            stdio: 'inherit'
+            studio: 'inherit'
         })
         .on('close', done);
 });
@@ -38,13 +37,19 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
-    browserSync({
+
+gulp.task('serveIt', ['sass', 'scripts', 'jekyll-build'], function() {
+
+    browserSync.init({
         server: {
             baseDir: '_site'
         },
         open: false
     });
+
+    gulp.watch('_scss/**/*.scss', ['sass']);
+    gulp.watch('_js/*.js', ['scripts']).on('change', browserSync.reload);
+    gulp.watch(['*.html', '_includes/**/*.html', '_data/*.yml', '_layouts/*.html', '*.md', '_posts/**/*'], ['jekyll-rebuild']);
 });
 
 /**
@@ -82,42 +87,21 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src('_js/*.js')
+        .pipe(plumber())
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('js'))
         .pipe(gulp.dest('_site/js'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(uglify())
         .pipe(gulp.dest('js'))
         .pipe(gulp.dest('_site/js'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
         .pipe(notify({
             message: 'Scripts task complete'
         }));
 });
 
-/**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function() {
-    gulp.watch('_scss/**/*.scss', ['sass']);
-    gulp.watch('_js/*.js', ['scripts']);
-    gulp.watch(['*.html', '_includes/**/*.html', '_data/*.yml', '_layouts/*.html', '*.md', '_posts/**/*'], ['jekyll-rebuild']);
-});
-
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
-gulp.task('default', function() {
-    gulp.start('sass', 'scripts', 'browser-sync', 'watch');
-});
+gulp.task('default', ['serveIt']);
